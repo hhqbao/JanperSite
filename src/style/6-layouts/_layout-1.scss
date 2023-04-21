@@ -1,10 +1,20 @@
 .layout-1 {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
 
   &__left-panel {
   }
 
   &__right-panel {
+    flex: 1;
+    height: 100%;
+    overflow: auto;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none !important;
+    }
   }
 }
