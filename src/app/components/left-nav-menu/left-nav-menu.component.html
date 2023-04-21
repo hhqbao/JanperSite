@@ -1,0 +1,79 @@
+<div class="left-nav-menu">
+  <div class="menu menu--1" [ngClass]="{ open: isMainLevelOpen }">
+    <button type="button" class="open-btn" (click)="isMainLevelOpen = true">
+      <i class="fa-sharp fa-solid fa-bars"></i>
+    </button>
+    <button type="button" class="close-btn" (click)="isMainLevelOpen = false; isSubLevelOpen = false">
+      <i class="fa-sharp fa-solid fa-xmark"></i>
+    </button>
+    <ul class="menu-list">
+      <li class="menu-list__item">
+        <a>Home</a>
+      </li>
+      <li class="menu-list__item">
+        <a>Gallery</a>
+      </li>
+      <li class="menu-list__item">
+        <a>About</a>
+      </li>
+      <li class="menu-list__divider"></li>
+      <li class="menu-list__item">
+        <a>JanperAcrylic</a>
+      </li>
+      <li class="menu-list__item" [ngClass]="{ active: isSubLevelOpen }">
+        <a (click)="isSubLevelOpen = true">Duraform</a>
+      </li>
+      <li class="menu-list__item">
+        <a>JanperEdge</a>
+      </li>
+      <li class="menu-list__item">
+        <a>JanperEase</a>
+      </li>
+      <li class="menu-list__divider"></li>
+      <li class="menu-list__item">
+        <a>Trade Area</a>
+      </li>
+      <li class="menu-list__item">
+        <a>Contact Us</a>
+      </li>
+    </ul>
+  </div>
+  <div class="menu menu--2" [ngClass]="{ open: isSubLevelOpen }">
+    <button type="button" class="close-btn" (click)="isSubLevelOpen = false">
+      <i class="fa-sharp fa-solid fa-xmark"></i>
+    </button>
+    <ul class="menu-list">
+      <li class="menu-list__item">
+        <a></a>
+      </li>
+      <li class="menu-list__item">
+        <a></a>
+      </li>
+      <li class="menu-list__item">
+        <a></a>
+      </li>
+      <li class="menu-list__divider"></li>
+      <li class="menu-list__item">
+        <a>SeriesOne</a>
+      </li>
+      <li class="menu-list__item">
+        <a>SeriesTwo</a>
+      </li>
+      <li class="menu-list__item">
+        <a>SeriesThree</a>
+      </li>
+      <li class="menu-list__item">
+        <a>SeriesFour</a>
+      </li>
+      <li class="menu-list__item">
+        <a>SeriesFive</a>
+      </li>
+      <li class="menu-list__item">
+        <a>Colours & Fnishes</a>
+      </li>
+      <li class="menu-list__item">
+        <a>Options & Accessories</a>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,123 @@
+.left-nav-menu {
+  display: flex;
+  height: 100%;
+  text-align: center;
+
+  .menu-list {
+    color: white;
+    list-style: none;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    transition: all 0.2s ease-out;
+
+    &__item {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      min-height: 4rem;
+
+      & > a {
+        &,
+        &:link,
+        &:visited {
+          color: inherit;
+          cursor: pointer;
+          display: block;
+          font-size: 1.4rem;
+          padding: 0 0.3rem;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &__divider {
+      padding: 1.5rem 0;
+
+      &::before {
+        background-color: white;
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+      }
+    }
+  }
+
+  .menu {
+    min-width: 0rem;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+
+    & > .close-btn {
+      border: none;
+      background-color: transparent;
+      color: white;
+      cursor: pointer;
+      display: none;
+      font-size: 2.5rem;
+      line-height: 0;
+      position: absolute;
+      right: 1rem;
+      top: 1.3rem;
+    }
+
+    &.open {
+      min-width: 22rem;
+
+      .open-btn {
+        opacity: 0;
+        position: absolute;
+        z-index: -9999;
+      }
+
+      .close-btn {
+        display: inline-block;
+      }
+
+      .menu-list {
+        margin-top: 4rem;
+        opacity: 1;
+        position: relative;
+        padding: 0 4rem;
+      }
+    }
+
+    &--1 {
+      background-color: $red--1;
+
+      .open-btn {
+        border: none;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+        font-size: 3rem;
+        margin: 1.5rem 1rem 0 1rem;
+        transition: opacity 0.3s ease;
+      }
+
+      .menu-list {
+        &__item {
+          &:hover,
+          &.active {
+            color: $black--1;
+          }
+        }
+      }
+    }
+
+    &--2 {
+      background-color: $black--1;
+
+      .menu-list {
+        &__item {
+          &:hover,
+          &.active {
+            color: $red--1;
+          }
+        }
+      }
+    }
+  }
+}
