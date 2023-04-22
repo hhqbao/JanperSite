@@ -50,6 +50,16 @@
     background-color: $red--1;
     color: white;
     padding: 6rem 30rem;
+    position: relative;
     text-align: center;
+
+    &::after {
+      border-top: solid 5rem white;
+      border-right: solid 5rem transparent;
+      content: "";
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
   }
 }

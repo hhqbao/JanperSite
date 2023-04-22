@@ -1,8 +1,9 @@
 <div class="layout-1">
   <div class="layout-1__left-panel">
-    <app-left-nav-menu></app-left-nav-menu>
+    <app-left-nav-menu #leftNavMenu></app-left-nav-menu>
   </div>
-  <div class="layout-1__right-panel">
+  <div class="layout-1__right-panel" [ngClass]="{ 'open-1': leftNavMenu.isMainLevelOpen, 'open-2': leftNavMenu.isSubLevelOpen }">
     <router-outlet></router-outlet>
   </div>
+  <footer>Something</footer>
 </div>
