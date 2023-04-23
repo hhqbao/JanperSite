@@ -1,0 +1,20 @@
+.form {
+  &__group {
+    display: block;
+
+    &:not(:first-child) {
+      margin-top: 0.8rem;
+    }
+  }
+
+  &__control {
+    border: solid 1px $black--1;
+    display: block;
+    padding: 1rem 1.5rem;
+    width: 100%;
+
+    &--shade {
+      background-color: rgba($black--1, 0.1);
+    }
+  }
+}

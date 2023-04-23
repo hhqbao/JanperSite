@@ -1,11 +1,11 @@
 .layout-1 {
-  &__left-panel {
+  .left-panel {
     height: 100vh;
     position: fixed;
     z-index: 1;
   }
 
-  &__right-panel {
+  .right-panel {
     padding-left: $menu-collapsed-width;
     transition: all 0.3s ease;
 
@@ -18,10 +18,73 @@
     }
   }
 
-  footer {
-    background-color: white;
-    height: 40rem;
+  .footer {
+    background-color: #fff;
     position: relative;
+    padding: 5rem 0;
     z-index: 2;
+
+    &__container {
+      margin: 0 auto;
+      max-width: 65vw;
+
+      .top-section {
+        display: flex;
+
+        &__col {
+          flex: 1;
+        }
+
+        &__menu-list {
+          list-style: none;
+
+          .menu-item {
+            & > a {
+              &,
+              &:link,
+              &:visited {
+                color: $black--1;
+                text-decoration: none;
+              }
+            }
+
+            &:first-child {
+              font-weight: bold;
+            }
+
+            &:not(:first-child) {
+              font-weight: 300;
+              margin-top: 1.5rem;
+            }
+          }
+
+          &--bold {
+            .menu-item {
+              font-weight: bold !important;
+            }
+          }
+        }
+
+        .search-input {
+          position: relative;
+
+          & > .form__control {
+            padding-right: 5rem;
+          }
+
+          & > i {
+            font-size: 3rem;
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+
+      .bot-section {
+        margin-top: 3rem;
+      }
+    }
   }
 }

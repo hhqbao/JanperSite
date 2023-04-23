@@ -8,6 +8,12 @@ import { LeftNavMenuComponent } from 'src/app/components/left-nav-menu/left-nav-
 export class Layout1Component implements OnInit {
   @ViewChild('leftNavMenu') leftNavMenu!: LeftNavMenuComponent;
 
+  get currentYear(): number {
+    const today = new Date();
+
+    return today.getFullYear();
+  }
+
   constructor() {}
 
   ngOnInit() {}
