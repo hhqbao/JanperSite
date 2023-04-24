@@ -45,6 +45,10 @@
               &:visited {
                 color: $black--1;
                 text-decoration: none;
+
+                &:hover {
+                  color: $red--1;
+                }
               }
             }
 

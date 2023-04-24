@@ -6,6 +6,11 @@
 
     & > a {
       font-size: 3rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $red--1;
+      }
     }
 
     &:not(:first-child) {

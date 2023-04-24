@@ -1,0 +1,47 @@
+.simple-contact-form {
+  background-color: $black--1;
+  padding: 8rem 0;
+  position: relative;
+
+  &::before {
+    border-top: solid 5rem $red--1;
+    border-right: solid 5rem transparent;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  &__container {
+    max-width: 102.4rem;
+    margin: 0 auto;
+
+    .text-box {
+      color: white;
+      font-family: "Baskerville";
+
+      & > .heading {
+        font-weight: normal;
+      }
+    }
+  }
+
+  &__submit-btn {
+    border: solid 1px $red--1;
+    background-color: $red--1;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: 2rem;
+    font-weight: 100;
+    padding: 1rem 0;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    width: 100%;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

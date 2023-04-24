@@ -3,7 +3,7 @@
     display: block;
 
     &:not(:first-child) {
-      margin-top: 0.8rem;
+      margin-top: 1.5rem;
     }
   }
 
@@ -15,6 +15,10 @@
 
     &--shade {
       background-color: rgba($black--1, 0.1);
+    }
+
+    &:is(textarea) {
+      resize: none;
     }
   }
 }
