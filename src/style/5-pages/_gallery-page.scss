@@ -1,0 +1,24 @@
+.gallery-page {
+  min-height: 100vh;
+  padding: 5rem;
+
+  .logo-box {
+    margin-bottom: 5rem;
+
+    & > img {
+      display: block;
+      max-width: 40rem;
+    }
+  }
+
+  .gallery-section {
+    margin-top: 3rem;
+
+    &__title {
+      color: $red--1;
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+  }
+}

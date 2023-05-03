@@ -105,8 +105,11 @@
 
       .menu-list {
         &__item {
-          &:hover,
-          &.active {
+          & > .active {
+            color: $black--1;
+          }
+
+          &:hover {
             color: $black--1;
           }
         }
@@ -118,8 +121,11 @@
 
       .menu-list {
         &__item {
-          &:hover,
-          &.active {
+          & > .active {
+            color: $red--1;
+          }
+
+          &:hover {
             color: $red--1;
           }
         }
